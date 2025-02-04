@@ -5,17 +5,33 @@ const customerStories = [
   {
     name: 'John Doe',
     story: 'I love the new windows I installed from this company! They really made my home more energy-efficient and stylish.',
-    image: 'https://via.placeholder.com/300', // Add real image URL
+    image: "images/sliding window.jpg"
   },
   {
     name: 'Jane Smith',
     story: 'The team was professional and the installation was smooth. My home feels so much brighter with these new windows.',
-    image: 'https://via.placeholder.com/300', // Add real image URL
+    image: "images/sliding1.png", 
   },
   {
     name: 'Alice Johnson',
     story: 'I’ve noticed a huge difference in noise reduction since I installed the windows. Great product!',
-    image: 'https://via.placeholder.com/300', // Add real image URL
+    image: 'images/sliding 3.png', 
+  },
+
+  {
+    name: 'Michael Brown',
+    story: 'The windows not only look great, but they have significantly reduced my energy bills. I couldn’t be happier!',
+    image: "images/sliding 6.jpg",
+  },
+  {
+    name: 'Emily White',
+    story: 'I’m impressed with the quality of the windows and the quick installation. It made a big difference in how my home feels.',
+    image: "images/fix.jpg",
+  },
+  {
+    name: 'Chris Black',
+    story: 'These windows have made my home quieter and more comfortable. Plus, the installation was done on time and professionally.',
+    image: 'images/top.jpg',
   },
 ];
 
@@ -42,7 +58,7 @@ const CustomerStories = () => {
                 image={story.image}
                 alt={story.name}
               />
-              <CardContent>
+              <CardContent  sx={{ color: 'white' }}>
                 <Typography variant="h6" gutterBottom>
                   {story.name}
                 </Typography>

@@ -1,28 +1,17 @@
-// import React from 'react'
-
-// const Navbar = () => {
-//   return (
-//     <nav>
-//     <div>
-//         <ul style={{listStyleType: "none", display:"flex", justifyContent:"space-around"}}>
-//         <li>Home</li>
-//         <li>Projects</li>
-//         <li>Gallery</li>
-//         <li>Contact</li>
-//         <li>About</li>
-        
-//         </ul>
-//     </div>
-        
-//     </nav>
-//   )
-// }
-
-// export default Navbar
-
 import React, { useState } from "react";
-import { AppBar, Toolbar, IconButton, Typography, Drawer, List, ListItem, ListItemText, Box } from "@mui/material";
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+  Box,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Link } from "react-router-dom";  
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -31,7 +20,13 @@ const Navbar = () => {
     setMobileOpen(!mobileOpen);
   };
 
-  const navItems = ["Home", "Projects", "Gallery", "Contact", "About"];
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "Projects", path: "/projects" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "Contact", path: "/contact" },
+    { name: "About", path: "/about" },
+  ];
 
   return (
     <>
@@ -51,9 +46,11 @@ const Navbar = () => {
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "flex" } }}>
             {navItems.map((item) => (
-              <Typography key={item} sx={{ color: "white", mx: 2, cursor: "pointer" }}>
-                {item}
-              </Typography>
+              <Link to={item.path} key={item.name} style={{ textDecoration: 'none' }}>
+                <Typography sx={{ color: "white", mx: 2, cursor: "pointer" }}>
+                  {item.name}
+                </Typography>
+              </Link>
             ))}
           </Box>
         </Toolbar>
@@ -62,12 +59,16 @@ const Navbar = () => {
         anchor="left"
         open={mobileOpen}
         onClose={handleDrawerToggle}
-        sx={{ "& .MuiDrawer-paper": { backgroundColor: "#121212", color: "white" } }}
+        sx={{
+          "& .MuiDrawer-paper": { backgroundColor: "#121212", color: "white" },
+        }}
       >
         <List>
           {navItems.map((item) => (
-            <ListItem button key={item} onClick={handleDrawerToggle}>
-              <ListItemText primary={item} />
+            <ListItem button key={item.name} onClick={handleDrawerToggle}>
+              <Link to={item.path} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <ListItemText primary={item.name} />
+              </Link>
             </ListItem>
           ))}
         </List>
