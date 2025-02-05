@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import {
   AppBar,
@@ -11,7 +12,7 @@ import {
   Box,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Link } from "react-router-dom";  
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -41,10 +42,12 @@ const Navbar = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            My Website
-          </Typography>
-          <Box sx={{ display: { xs: "none", sm: "flex" } }}>
+          <img
+            src="/images/pinnacle window logo.jpg" 
+            alt="Logo"
+            style={{ height: 60, marginRight: 16, marginTop: 5 }}
+          />
+          <Box sx={{ ml: "auto", display: { xs: "none", sm: "flex" } }}>
             {navItems.map((item) => (
               <Link to={item.path} key={item.name} style={{ textDecoration: 'none' }}>
                 <Typography sx={{ color: "white", mx: 2, cursor: "pointer" }}>

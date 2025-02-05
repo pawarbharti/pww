@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Container, Grid, Typography, Link, IconButton } from "@mui/material";
-import { Facebook, Twitter, Instagram, LinkedIn } from "@mui/icons-material";
+import { Facebook, Instagram, WhatsApp, Mail } from "@mui/icons-material";
 
 const Footer = () => {
   return (
@@ -15,16 +15,16 @@ const Footer = () => {
             <Link href="#" color="inherit" underline="hover" sx={{ display: "block", mb: 1 }}>
               Home
             </Link>
-            <Link href="#" color="inherit" underline="hover" sx={{ display: "block", mb: 1 }}>
+            <Link href="/projects" color="inherit" underline="hover" sx={{ display: "block", mb: 1 }}>
               Projects
             </Link>
-            <Link href="#" color="inherit" underline="hover" sx={{ display: "block", mb: 1 }}>
+            <Link href="/gallery" color="inherit" underline="hover" sx={{ display: "block", mb: 1 }}>
               Gallery
             </Link>
-            <Link href="#" color="inherit" underline="hover" sx={{ display: "block", mb: 1 }}>
+            <Link href="/contact" color="inherit" underline="hover" sx={{ display: "block", mb: 1 }}>
               Contact
             </Link>
-            <Link href="#" color="inherit" underline="hover" sx={{ display: "block", mb: 1 }}>
+            <Link to="/about" color="inherit" underline="hover" sx={{ display: "block", mb: 1 }}>
               About
             </Link>
           </Grid>
@@ -45,25 +45,33 @@ const Footer = () => {
               Follow Us
             </Typography>
             <Box>
-              <IconButton sx={{ color: "white", "&:hover": { color: "#1877f2" } }}>
-                <Facebook />
-              </IconButton>
-              <IconButton sx={{ color: "white", "&:hover": { color: "#1da1f2" } }}>
-                <Twitter />
-              </IconButton>
-              <IconButton sx={{ color: "white", "&:hover": { color: "#e1306c" } }}>
-                <Instagram />
-              </IconButton>
-              <IconButton sx={{ color: "white", "&:hover": { color: "#0077b5" } }}>
-                <LinkedIn />
-              </IconButton>
+              <Link href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer">
+                <IconButton sx={{ color: "white", "&:hover": { color: "#1877f2" } }}>
+                  <Facebook />
+                </IconButton>
+              </Link>
+              <Link href="https://www.instagram.com/pinnaclehomesolutions_203" target="_blank" rel="noopener noreferrer">
+                <IconButton sx={{ color: "white", "&:hover": { color: "#e1306c" } }}>
+                  <Instagram />
+                </IconButton>
+              </Link>
+              <Link href="https://wa.me/+91-9910553531" target="_blank" rel="noopener noreferrer">
+                <IconButton sx={{ color: "white", "&:hover": { color: "#25d366" } }}>
+                  <WhatsApp />
+                </IconButton>
+              </Link>
+              <Link href="mailto:pinnaclehomesolutions24@gmail.com" target="_blank" rel="noopener noreferrer">
+                <IconButton sx={{ color: "white", "&:hover": { color: "#bb001b" } }}>
+                  <Mail />
+                </IconButton>
+              </Link>
             </Box>
           </Grid>
         </Grid>
 
         {/* Bottom Section */}
         <Box sx={{ textAlign: "center", mt: 4, opacity: 0.7 }}>
-          <Typography variant="body2">© {new Date().getFullYear()} Your Company. All rights reserved.</Typography>
+          <Typography variant="body2">© {new Date().getFullYear()} Pinnacle Window. All rights reserved.</Typography>
         </Box>
       </Container>
     </Box>
@@ -71,3 +79,5 @@ const Footer = () => {
 };
 
 export default Footer;
+ 
+ 

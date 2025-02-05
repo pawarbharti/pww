@@ -10,6 +10,9 @@ const features = [
   "Weather-resistant durability",
   "Easy maintenance",
   "Expert installation service",
+  "Affordable pricing",
+  "Sustainable products",
+  "Long-lasting performance",
 ];
 
 const EverythingYouNeed = () => {

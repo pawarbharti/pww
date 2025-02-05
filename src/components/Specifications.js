@@ -28,8 +28,8 @@ const specifications = [
     image: "images/fix.jpg" 
   },
   {
-    title: "Double Hung Windows",
-    description: "Double-hung windows are available with energy-efficient options, which help to reduce heat loss.",
+    title: "Casement Windows",
+    description: "Casement windows are available with energy-efficient options, which help to reduce heat loss.",
     image: "images/dounble hung.jpg" // 
   }
 ];
