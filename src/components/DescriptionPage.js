@@ -11,7 +11,7 @@ const DescriptionPage = () => {
           gutterBottom
           sx={{ fontWeight: "bold" }}
         >
-          Description
+          Pinnacle Window
         </Typography>
         <Grid container spacing={3} justifyContent="center" alignItems="center">
           {/* Left side: Paragraph */}
