@@ -7,7 +7,7 @@ const DescriptionPage = () => {
       <Container>
         <Typography
           variant="h4"
-          align="center"
+          align="left"
           gutterBottom
           sx={{ fontWeight: "bold" }}
         >
