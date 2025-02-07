@@ -1,37 +1,50 @@
-import React from 'react';
-import { Box, Typography, Card, CardContent, CardMedia, Grid } from '@mui/material';
+import React from "react";
+import {
+  Box,
+  Typography,
+  Card,
+  CardContent,
+  CardMedia,
+  Grid,
+} from "@mui/material";
 
 const customerStories = [
   {
-    name: 'John Doe',
-    story: 'I love the new windows I installed from this company! They really made my home more energy-efficient and stylish.',
-    image: "images/Real 3.jpg"
+    name: "Amritsar, Punjab",
+    story:
+      "The new windows have completely transformed the building. Not only do they enhance the aesthetic appeal of my space, but they also made a noticeable difference in my energy efficiency. My home is now more comfortable, and I’m saving money on utility bills!",
+    image: "images/Real 3.jpg",
   },
   {
-    name: 'Jane Smith',
-    story: 'The team was professional and the installation was smooth. My home feels so much brighter with these new windows.',
-    image: "images/real 7.jpg", 
+    name: "Rohini, Delhi",
+    story:
+      "From start to finish, the experience was seamless. The team was incredibly professional, and the installation was quick. The new windows have allowed so much more light, making it feel brighter and more inviting.",
+    image: "images/real 7.jpg",
   },
   {
-    name: 'Alice Johnson',
-    story: 'I’ve noticed a huge difference in noise reduction since I installed the windows. Great product!',
-    image: 'images/real 8.jpg', 
+    name: "Tirupati Farm, Gurugram, Haryana",
+    story:
+      "Since installing these windows, my farm has become quieter and cozier. Not only did the installation process go smoothly, but I was impressed by how punctual and skilled the team was. A top-notch experience from beginning to end.",
+    image: "images/real 8.jpg",
   },
 
   {
-    name: 'Michael Brown',
-    story: 'The windows not only look great, but they have significantly reduced my energy bills. I couldn’t be happier!',
+    name: "GTB Nagar, Delhi",
+    story:
+      "I’m beyond pleased with my new windows. Not only do they add a sleek look, but I’ve already noticed a significant reduction in my energy bills. I can honestly say I couldn’t be happier with this investment!",
     image: "images/Real 5.jpg",
   },
   {
-    name: 'Emily White',
-    story: 'I’m impressed with the quality of the windows and the quick installation. It made a big difference in how my home feels.',
+    name: "Gurugram, Haryana",
+    story:
+      "I was impressed by both the quality of the windows and the efficiency of the installation. My home feels so much better, with better insulation and a more refined look. It’s a small change that made a huge difference!",
     image: "images/Real 1.jpg",
   },
   {
-    name: 'Chris Black',
-    story: 'These windows have made my home quieter and more comfortable. Plus, the installation was done on time and professionally.',
-    image: 'images/REAL 2.jpg',
+    name: "Amritsar, Punjab",
+    story:
+      "These windows have not only improved the look, but they’ve also brought a noticeable reduction in outside noise. The team did an excellent job, and the installation was timely and professional.",
+    image: "images/REAL 2.jpg",
   },
 ];
 
@@ -39,10 +52,10 @@ const CustomerStories = () => {
   return (
     <Box
       sx={{
-        backgroundColor: '#121212',
-        color: 'white',
-        padding: '20px',
-        minHeight: '100vh',
+        backgroundColor: "#121212",
+        color: "white",
+        padding: "20px",
+        minHeight: "100vh",
       }}
     >
       <Typography variant="h4" align="center" gutterBottom>
@@ -51,18 +64,18 @@ const CustomerStories = () => {
       <Grid container spacing={4} justifyContent="center">
         {customerStories.map((story, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
-            <Card 
-              sx={{ 
-                backgroundColor: '#1e1e1e', 
-                borderRadius: "8px", 
-                boxShadow: "0 4px 15px rgba(255, 255, 255, 0.3)", 
-                width: "100%", 
-                maxHeight: "400px", 
-                transition: "transform 0.3s ease-in-out", 
-                "&:hover": { 
-                  transform: "scale(1.05)", 
-                  boxShadow: "0 4px 20px rgba(255, 255, 255, 0.2)", 
-                } 
+            <Card
+              sx={{
+                backgroundColor: "#1e1e1e",
+                borderRadius: "8px",
+                boxShadow: "0 4px 15px rgba(255, 255, 255, 0.3)",
+                width: "100%",
+                maxHeight: "400px",
+                transition: "transform 0.3s ease-in-out",
+                "&:hover": {
+                  transform: "scale(1.05)",
+                  boxShadow: "0 4px 20px rgba(255, 255, 255, 0.2)",
+                },
               }}
             >
               <CardMedia
@@ -72,10 +85,10 @@ const CustomerStories = () => {
                 alt={story.name}
                 sx={{
                   objectFit: "cover",
-                  borderRadius: "8px 8px 0 0", 
+                  borderRadius: "8px 8px 0 0",
                 }}
               />
-              <CardContent sx={{ color: 'white' }}>
+              <CardContent sx={{ color: "white" }}>
                 <Typography variant="h6" gutterBottom>
                   {story.name}
                 </Typography>

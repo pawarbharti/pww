@@ -5,17 +5,14 @@ import EverythingYouNeed from "../components/EverythingYouNeed";
 import CustomerStories from "../components/CustomerStories";
 import DescriptionPage from "../components/DescriptionPage";
 
-
 function HomePage() {
   return (
-    <div >
-    <DescriptionPage/>
+    <div>
+      <DescriptionPage />
       <Specifications />
       <WorkWithUs />
       <EverythingYouNeed />
-      <CustomerStories/>
-      
-      
+      <CustomerStories />
     </div>
   );
 }

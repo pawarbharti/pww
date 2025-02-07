@@ -54,7 +54,7 @@ const Contact = () => {
                 }}
                 InputLabelProps={{
                   sx: {
-                    color: "white",  // Set the label color to white
+                    color: "white",
                   },
                 }}
                 InputProps={{
@@ -72,7 +72,7 @@ const Contact = () => {
                 }}
                 InputLabelProps={{
                   sx: {
-                    color: "white",  // Set the label color to white
+                    color: "white",  
                   },
                 }}
                 InputProps={{
@@ -90,7 +90,7 @@ const Contact = () => {
                 }}
                 InputLabelProps={{
                   sx: {
-                    color: "white",  // Set the label color to white
+                    color: "white", 
                   },
                 }}
                 InputProps={{

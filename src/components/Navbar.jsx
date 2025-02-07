@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import {
   AppBar,
@@ -27,7 +26,6 @@ const Navbar = () => {
     { name: "Gallery", path: "/gallery" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
-   
   ];
 
   return (
@@ -44,14 +42,28 @@ const Navbar = () => {
             <MenuIcon />
           </IconButton>
           <img
-            src="/images/pinnacle window logo.jpg" 
+            src="/images/pinnacle window logo.jpg"
             alt="Logo"
             style={{ height: 60, marginRight: 16, marginTop: 5 }}
           />
           <Box sx={{ ml: "auto", display: { xs: "none", sm: "flex" } }}>
             {navItems.map((item) => (
-              <Link to={item.path} key={item.name} style={{ textDecoration: 'none' }}>
-                <Typography sx={{ color: "white", mx: 2, cursor: "pointer" }}>
+              <Link
+                to={item.path}
+                key={item.name}
+                style={{ textDecoration: "none" }}
+              >
+                <Typography
+                  sx={{
+                    color: "white",
+                    mx: 2,
+                    cursor: "pointer",
+                    transition: "transform 0.2s ease",
+                    "&:hover": {
+                      transform: "scale(1.2)",
+                    },
+                  }}
+                >
                   {item.name}
                 </Typography>
               </Link>
@@ -70,8 +82,19 @@ const Navbar = () => {
         <List>
           {navItems.map((item) => (
             <ListItem button key={item.name} onClick={handleDrawerToggle}>
-              <Link to={item.path} style={{ textDecoration: 'none', color: 'inherit' }}>
-                <ListItemText primary={item.name} />
+              <Link
+                to={item.path}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <ListItemText
+                  primary={item.name}
+                  sx={{
+                    transition: "transform 0.2s ease",
+                    "&:hover": {
+                      transform: "scale(1.1)", 
+                    },
+                  }}
+                />
               </Link>
             </ListItem>
           ))}

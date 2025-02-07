@@ -21,33 +21,47 @@ const About = () => {
               paragraph
               sx={{ color: "white", fontSize: "1.1rem" }}
             >
-              Pinnacle Window is a leading provider of premium uPVC and aluminum doors and windows, offering the perfect blend of style, durability, and energy efficiency. With years of expertise in the industry, we specialize in delivering top-quality products that meet the highest standards for both residential and commercial properties.
+              Pinnacle Window is a leading provider of premium uPVC and aluminum
+              doors and windows, offering the perfect blend of style,
+              durability, and energy efficiency. With years of expertise in the
+              industry, we specialize in delivering top-quality products that
+              meet the highest standards for both residential and commercial
+              properties.
             </Typography>
             <Typography
               variant="body1"
               paragraph
               sx={{ color: "white", fontSize: "1.1rem" }}
             >
-              Our range of windows and doors are designed to not only enhance the aesthetic appeal of your space but also provide superior insulation and weather resistance. Whether you are building a new home, renovating, or upgrading your office space, Pinnacle Window provides innovative solutions that cater to modern living.
+              Our range of windows and doors are designed to not only enhance
+              the aesthetic appeal of your space but also provide superior
+              insulation and weather resistance. Whether you are building a new
+              home, renovating, or upgrading your office space, Pinnacle Window
+              provides innovative solutions that cater to modern living.
             </Typography>
             <Typography
               variant="body1"
               paragraph
               sx={{ color: "white", fontSize: "1.1rem" }}
             >
-              At Pinnacle Window, we are committed to delivering exceptional customer service, ensuring that every project is handled with professionalism and attention to detail. Our products are designed to deliver lasting performance, and we take pride in being your trusted partner for all your door and window needs.
+              At Pinnacle Window, we are committed to delivering exceptional
+              customer service, ensuring that every project is handled with
+              professionalism and attention to detail. Our products are designed
+              to deliver lasting performance, and we take pride in being your
+              trusted partner for all your door and window needs.
             </Typography>
           </Grid>
 
           {/* Right side: Images with gap between them */}
           <Grid item xs={12} sm={6}>
-            <Grid container spacing={2}> {/* Added a Grid container for spacing between images */}
-              {/* New Image Above with margin to the right */}
+            <Grid container spacing={2}>
+              {" "}
+              {/* Added a Grid container for spacing between images */}
               <Grid item xs={12}>
                 <CardMedia
                   component="img"
-                  height="270" 
-                  image="images/gallery 6.png" 
+                  height="270"
+                  image="images/gallery 6.png"
                   alt="New Pinnacle Window Product"
                   sx={{
                     borderRadius: "8px",
@@ -55,7 +69,7 @@ const About = () => {
                     width: "100%",
                     objectFit: "cover",
                     transition: "transform 0.3s ease-in-out",
-                    ml: "80px", 
+                    ml: "80px",
                     "&:hover": {
                       transform: "scale(1.05)",
                       boxShadow: "0 4px 20px rgba(255, 255, 255, 0.2)",
@@ -67,8 +81,8 @@ const About = () => {
               <Grid item xs={12}>
                 <CardMedia
                   component="img"
-                  height="270" 
-                  image="images/gallery 12.png" 
+                  height="270"
+                  image="images/gallery 12.png"
                   alt="Pinnacle Window Products"
                   sx={{
                     borderRadius: "8px",
