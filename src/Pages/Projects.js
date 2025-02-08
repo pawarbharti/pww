@@ -13,7 +13,25 @@ import {
   Slide,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
-import Carousel from "react-material-ui-carousel";
+import StylesAndColors from "../components/StylesAndColors";
+
+const galleryImages = [
+  "images/gallery 2.jpg",
+  "images/gallery 11.jpg",
+  "images/gallery 4.jpg",
+  "images/gallery 12.png",
+  "images/gallery 1.jpg",
+  "images/gallery 3.png",
+  "images/gallery 5.jpg",
+  "images/gallery 6.png",
+  "images/gallery 7.jpg",
+  "images/gallery 8.jpg",
+  "images/gallery 9.jpg",
+  "images/gallery 10.jpg",
+  "images/gallery 13.jpg",
+  "images/gallery 14.png",
+  "images/gallery 15.jpg",
+];
 
 const projects = [
   {
@@ -24,7 +42,8 @@ const projects = [
   },
   {
     title: "Luxury Patio Doors",
-    description:  "Sliding patio doors often have thin frames to maximize the glass area, providing clear, unobstructed views of the outdoor environment and letting in ample natural light. They are ideal for homes with limited space, as they don't require additional clearance like traditional swinging doors. These doors can be made from a variety of materials, including wood, aluminum, or vinyl, and are often designed with energy-efficient glass to help with insulation. Additionally, sliding patio doors may come with built-in screens to keep bugs out while allowing fresh air in.",
+    description:
+      "Sliding patio doors often have thin frames to maximize the glass area, providing clear, unobstructed views of the outdoor environment and letting in ample natural light. They are ideal for homes with limited space, as they don't require additional clearance like traditional swinging doors. These doors can be made from a variety of materials, including wood, aluminum, or vinyl, and are often designed with energy-efficient glass to help with insulation. Additionally, sliding patio doors may come with built-in screens to keep bugs out while allowing fresh air in.",
     image: "images/projects 3.jpg",
   },
   {
@@ -53,37 +72,37 @@ const projects = [
   },
 ];
 
-const testimonials = [
-  {
-    name: "Sarah Williams",
-    feedback:
-      "The best decision I made for my home! The quality and service were exceptional.",
-    image: "https://source.unsplash.com/100x100/?woman,portrait",
-  },
-  {
-    name: "David Johnson",
-    feedback:
-      "Professional installation and top-notch customer service. Highly recommend!",
-    image: "https://source.unsplash.com/100x100/?man,portrait",
-  },
-  {
-    name: "Emily Brown",
-    feedback: "The new windows made my home more energy-efficient and stylish.",
-    image: "https://source.unsplash.com/100x100/?woman,smiling",
-  },
-  {
-    name: "Michael Scott",
-    feedback:
-      "Excellent craftsmanship and great customer support. Will use again!",
-    image: "https://source.unsplash.com/100x100/?man,smile",
-  },
-  {
-    name: "Jessica Lee",
-    feedback:
-      "From consultation to installation, everything was smooth and hassle-free.",
-    image: "https://source.unsplash.com/100x100/?woman,face",
-  },
-];
+// const testimonials = [
+//   {
+//     name: "Sarah Williams",
+//     feedback:
+//       "The best decision I made for my home! The quality and service were exceptional.",
+//     image: "https://source.unsplash.com/100x100/?woman,portrait",
+//   },
+//   {
+//     name: "David Johnson",
+//     feedback:
+//       "Professional installation and top-notch customer service. Highly recommend!",
+//     image: "https://source.unsplash.com/100x100/?man,portrait",
+//   },
+//   {
+//     name: "Emily Brown",
+//     feedback: "The new windows made my home more energy-efficient and stylish.",
+//     image: "https://source.unsplash.com/100x100/?woman,smiling",
+//   },
+//   {
+//     name: "Michael Scott",
+//     feedback:
+//       "Excellent craftsmanship and great customer support. Will use again!",
+//     image: "https://source.unsplash.com/100x100/?man,smile",
+//   },
+//   {
+//     name: "Jessica Lee",
+//     feedback:
+//       "From consultation to installation, everything was smooth and hassle-free.",
+//     image: "https://source.unsplash.com/100x100/?woman,face",
+//   },
+// ];
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -113,13 +132,11 @@ const Projects = () => {
         Our Projects
       </Typography> */}
 
-
       <Typography variant="h5" align="center" gutterBottom>
         Featured Projects
       </Typography>
       <Divider sx={{ backgroundColor: "white", marginBottom: "20px" }} />
 
-      
       <Grid container spacing={4} justifyContent="center">
         {projects.map((project, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
@@ -155,7 +172,9 @@ const Projects = () => {
         </Typography>
       </Box>
 
-      <Box
+      <StylesAndColors />
+
+      {/* <Box
         sx={{
           padding: "40px 0",
           textAlign: "center",
@@ -192,6 +211,56 @@ const Projects = () => {
             </Card>
           ))}
         </Carousel>
+      </Box> */}
+      <Box
+        sx={{
+          backgroundColor: "#121212",
+          color: "white",
+          padding: "20px",
+          minHeight: "100vh",
+        }}
+      >
+        <Typography
+          variant="h4"
+          align="center"
+          gutterBottom
+          sx={{ fontWeight: "bold" }}
+        >
+          Select by Category
+        </Typography>
+
+        {/* Gallery Grid */}
+        <Grid container spacing={4} justifyContent="center">
+          {galleryImages.map((image, index) => (
+            <Grid item xs={12} sm={6} md={4} key={index}>
+              <Card
+                sx={{
+                  backgroundColor: "#1e1e1e",
+                  borderRadius: "8px",
+                  boxShadow: "0 4px 15px rgba(255, 255, 255, 0.3)",
+                  width: "100%",
+                  maxHeight: "400px",
+                  transition: "transform 0.3s ease-in-out",
+                  "&:hover": {
+                    transform: "scale(1.05)",
+                    boxShadow: "0 4px 20px rgba(255, 255, 255, 0.2)",
+                  },
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  height="200"
+                  image={image}
+                  alt={`Gallery image ${index + 1}`}
+                  sx={{
+                    objectFit: "cover",
+                    borderRadius: "8px 8px 0 0",
+                  }}
+                />
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
       </Box>
 
       <Dialog

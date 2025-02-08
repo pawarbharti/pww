@@ -9,9 +9,12 @@ import {
   ListItem,
   ListItemText,
   Box,
+  Tooltip,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import DownloadIcon from "@mui/icons-material/Download"; 
 import { Link } from "react-router-dom";
+import { saveAs } from "file-saver"; 
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -20,10 +23,15 @@ const Navbar = () => {
     setMobileOpen(!mobileOpen);
   };
 
+  const handleDownload = () => {
+    const pdfUrl = "/PINNACLE WINDOW CATALOGUE.pdf";
+    saveAs(pdfUrl, "PINNACLE WINDOW CATALOGUE.pdf");
+  };
+
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Projects", path: "/projects" },
-    { name: "Gallery", path: "/gallery" },
+    // { name: "Gallery", path: "/gallery" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];
@@ -69,8 +77,20 @@ const Navbar = () => {
               </Link>
             ))}
           </Box>
+
+          {/* Add the download icon with tooltip at the end */}
+          <Tooltip title="Download Catalogue">
+            <IconButton
+              color="inherit"
+              onClick={handleDownload}
+              sx={{ ml: 2 }}
+            >
+              <DownloadIcon />
+            </IconButton>
+          </Tooltip>
         </Toolbar>
       </AppBar>
+
       <Drawer
         anchor="left"
         open={mobileOpen}
@@ -91,7 +111,7 @@ const Navbar = () => {
                   sx={{
                     transition: "transform 0.2s ease",
                     "&:hover": {
-                      transform: "scale(1.1)", 
+                      transform: "scale(1.1)",
                     },
                   }}
                 />

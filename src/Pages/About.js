@@ -1,5 +1,7 @@
 import React from "react";
 import { Box, Container, Grid, Typography, CardMedia } from "@mui/material";
+import FAQ from "../components/FrequentlyAskedQuestions";
+import Clients from "../components/Clients";
 
 const About = () => {
   return (
@@ -100,6 +102,7 @@ const About = () => {
             </Grid>
           </Grid>
         </Grid>
+        <FAQ/>
       </Container>
     </Box>
   );

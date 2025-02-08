@@ -41,14 +41,14 @@ const Footer = () => {
             >
               Projects
             </Link>
-            <Link
+            {/* <Link
               href="/gallery"
               color="inherit"
               underline="hover"
               sx={{ display: "block", mb: 1 }}
             >
               Gallery
-            </Link>
+            </Link> */}
             <Link
               href="/about"
               color="inherit"
