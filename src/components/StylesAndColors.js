@@ -48,7 +48,7 @@ const StylesAndColors = () => {
             <CardMedia
               component="img"
               height="250"
-              image="https://via.placeholder.com/400x250.png?text=Aluminium+Window"
+              image= "images/stylecolor.jpg"
               alt="Aluminium Window"
             />
             <CardContent>

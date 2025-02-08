@@ -13,7 +13,7 @@ const specifications = [
     image: "images/aluminum 5.jpg"
   },
   {
-    title: "Upvc Doors and Windows",
+    title: "uPVC Doors and Windows",
     description: "uPVC doors offer excellent thermal insulation and reduce energy bills.",
     image: "images/upvc 2.jpg"
   },
@@ -38,7 +38,7 @@ const Specifications = () => {
   return (
     <Box sx={{ backgroundColor: "#121212", color: "white", py: 5 }}>
       <Container>
-        <Typography variant="h4" align="center" gutterBottom sx={{ fontWeight: "bold" }}>
+        <Typography variant="h4" align="center" gutterBottom sx={{ fontWeight: "bold" , mb: "1.35em" }}>
           Specifications
         </Typography>
         <Grid container spacing={3} justifyContent="center">

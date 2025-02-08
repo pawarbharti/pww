@@ -43,7 +43,7 @@ const customerStories = [
   {
     name: "Amritsar, Punjab",
     story:
-      "These windows have not only improved the look, but they’ve also brought a noticeable reduction in outside noise. The team did an excellent job, and the installation was timely and professional.",
+      "These windows have not only improved the look, but they’ve also brought a noticeable reduction in outside noise. The team did an excellent job, and the installation was timely and professional. I can already feel the difference in comfort and energy efficiency.",
     image: "images/REAL 2.jpg",
   },
 ];
@@ -58,7 +58,7 @@ const CustomerStories = () => {
         minHeight: "100vh",
       }}
     >
-      <Typography variant="h4" align="center" gutterBottom>
+      <Typography variant="h4" align="center" gutterBottom sx={{mb: "1.35em"}}>
         Customer Stories
       </Typography>
       <Grid container spacing={4} justifyContent="center">

@@ -72,38 +72,6 @@ const projects = [
   },
 ];
 
-// const testimonials = [
-//   {
-//     name: "Sarah Williams",
-//     feedback:
-//       "The best decision I made for my home! The quality and service were exceptional.",
-//     image: "https://source.unsplash.com/100x100/?woman,portrait",
-//   },
-//   {
-//     name: "David Johnson",
-//     feedback:
-//       "Professional installation and top-notch customer service. Highly recommend!",
-//     image: "https://source.unsplash.com/100x100/?man,portrait",
-//   },
-//   {
-//     name: "Emily Brown",
-//     feedback: "The new windows made my home more energy-efficient and stylish.",
-//     image: "https://source.unsplash.com/100x100/?woman,smiling",
-//   },
-//   {
-//     name: "Michael Scott",
-//     feedback:
-//       "Excellent craftsmanship and great customer support. Will use again!",
-//     image: "https://source.unsplash.com/100x100/?man,smile",
-//   },
-//   {
-//     name: "Jessica Lee",
-//     feedback:
-//       "From consultation to installation, everything was smooth and hassle-free.",
-//     image: "https://source.unsplash.com/100x100/?woman,face",
-//   },
-// ];
-
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -128,10 +96,7 @@ const Projects = () => {
         minHeight: "100vh",
       }}
     >
-      {/* <Typography variant="h4" align="center" gutterBottom>
-        Our Projects
-      </Typography> */}
-
+    
       <Typography variant="h5" align="center" gutterBottom>
         Featured Projects
       </Typography>
@@ -154,7 +119,7 @@ const Projects = () => {
                 <Typography variant="h6" gutterBottom>
                   {project.title}
                 </Typography>
-                <Typography variant="body2">{project.description}</Typography>
+                <Typography variant="body2">{project.description.split(0, 20)}</Typography>
               </CardContent>
             </Card>
           </Grid>
@@ -174,44 +139,6 @@ const Projects = () => {
 
       <StylesAndColors />
 
-      {/* <Box
-        sx={{
-          padding: "40px 0",
-          textAlign: "center",
-          backgroundColor: "#1e1e1e",
-        }}
-      >
-        <Typography variant="h5" gutterBottom>
-          Customer Testimonials
-        </Typography>
-        <Carousel autoPlay={true} animation="slide" indicators={false}>
-          {testimonials.map((testimonial, index) => (
-            <Card
-              key={index}
-              sx={{
-                backgroundColor: "#1e1e1e",
-                color: "white",
-                padding: "20px",
-                textAlign: "center",
-              }}
-            >
-              <CardMedia
-                component="img"
-                height="150"
-                image={testimonial.image}
-                alt={testimonial.name}
-                sx={{ borderRadius: "50%", width: "100px", margin: "auto" }}
-              />
-              <CardContent>
-                <Typography variant="h6">{testimonial.name}</Typography>
-                <Typography variant="body2">
-                  "{testimonial.feedback}"
-                </Typography>
-              </CardContent>
-            </Card>
-          ))}
-        </Carousel>
-      </Box> */}
       <Box
         sx={{
           backgroundColor: "#121212",

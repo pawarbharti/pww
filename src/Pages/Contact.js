@@ -1,40 +1,10 @@
-import React, { useState } from "react";
-import { Box, Container, Grid, Typography, TextField, Button } from "@mui/material";
-import { sendEmail } from "../Utils";
+import React from "react";
+import { Box, Container, Grid, Typography } from "@mui/material";
+import EnquiryForm from "../components/EnquiryForm";
 
 const Contact = () => {
   const mapurl =
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14015.190593014791!2d77.320955!3d28.57583845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce45f97fb7b77%3A0x57e50ec90fd80e55!2sNoida%20Sector-%2015%20Metro%20Station!5e0!3m2!1sen!2sin!4v1739003369453!5m2!1sen!2sin";
-
-  // State for form inputs
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    message: "",
-  });
-
-  // Handle form changes
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  // Handle form submission
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      // Call the sendEmail service
-      await sendEmail(formData);
-      alert("Message sent successfully!");
-      
-      // Optionally, reset the form after submission
-      setFormData({ name: "", phone: "", email: "", message: "" });
-    } catch (error) {
-      alert("Failed to send message. Please try again.");
-    }
-  };
 
   return (
     <Box sx={{ backgroundColor: "#000000", color: "white", py: 6 }}>
@@ -78,117 +48,10 @@ const Contact = () => {
             <Typography variant="h5" align="center" gutterBottom sx={{ fontWeight: "bold" }}>
               Send us a Message
             </Typography>
-            <Box
-              component="form"
-              onSubmit={handleSubmit}
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                gap: 3,
-                backgroundColor: "#1e1e1e",
-                padding: 3,
-                borderRadius: 2,
-              }}
-            >
-              <TextField
-                label="Name"
-                variant="outlined"
-                fullWidth
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                sx={{
-                  input: { color: "white" },
-                  "& .MuiOutlinedInput-root": { color: "white" },
-                  "& .MuiInputBase-input::placeholder": { color: "white" },
-                }}
-                InputLabelProps={{
-                  sx: {
-                    color: "white",
-                  },
-                }}
-                InputProps={{
-                  placeholder: "Enter your name",
-                }}
-              />
-              <TextField
-                label="Phone Number"
-                variant="outlined"
-                fullWidth
-                name="phone"
-                value={formData.phone}
-                onChange={handleInputChange}
-                sx={{
-                  input: { color: "white" },
-                  "& .MuiOutlinedInput-root": { color: "white" },
-                  "& .MuiInputBase-input::placeholder": { color: "white" },
-                }}
-                InputLabelProps={{
-                  sx: {
-                    color: "white",
-                  },
-                }}
-                InputProps={{
-                  placeholder: "Enter your phone number",
-                }}
-              />
-              <TextField
-                label="Email"
-                variant="outlined"
-                fullWidth
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                sx={{
-                  input: { color: "white" },
-                  "& .MuiOutlinedInput-root": { color: "white" },
-                  "& .MuiInputBase-input::placeholder": { color: "white" },
-                }}
-                InputLabelProps={{
-                  sx: {
-                    color: "white",
-                  },
-                }}
-                InputProps={{
-                  placeholder: "Enter your email",
-                }}
-              />
-              <TextField
-                label="Message"
-                variant="outlined"
-                fullWidth
-                multiline
-                rows={4}
-                name="message"
-                value={formData.message}
-                onChange={handleInputChange}
-                sx={{
-                  input: { color: "white" },
-                  "& .MuiOutlinedInput-root": { color: "white" },
-                  "& .MuiInputBase-input::placeholder": { color: "white" },
-                }}
-                InputLabelProps={{
-                  sx: {
-                    color: "white",
-                  },
-                }}
-                InputProps={{
-                  placeholder: "Enter your message",
-                }}
-              />
-              <Button
-                type="submit"
-                variant="contained"
-                sx={{
-                  backgroundColor: "#1877f2",
-                  "&:hover": { backgroundColor: "#166fe5" },
-                  color: "white",
-                  mt: 2,
-                }}
-              >
-                Submit
-              </Button>
-            </Box>
+
+            {/* Use the ContactForm component here */}
+            {/* <ContactForm /> */}
+            <EnquiryForm/>
           </Grid>
         </Grid>
       </Container>
