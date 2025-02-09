@@ -57,10 +57,10 @@ const DescriptionPage = () => {
                 width: "100%",
                 maxHeight: "400px",
                 objectFit: "cover",
-                transition: "transform 0.3s ease-in-out", 
+                transition: "transform 0.3s ease-in-out",
                 "&:hover": {
-                  transform: "scale(1.05)", 
-                  boxShadow: "0 4px 20px rgba(255, 255, 255, 0.2)", 
+                  transform: "scale(1.05)",
+                  boxShadow: "0 4px 20px rgba(255, 255, 255, 0.2)",
                 },
               }}
             />

@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
-import { TextField, Button, Container, Box } from '@mui/material';
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { TextField, Button, Container, Box } from "@mui/material";
 
 const EnquiryForm = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Your EmailJS service ID, template ID, and Public Key
-    const serviceId = 'service_681jsly';
-    const templateId = 'template_74pfbsq';
-    const publicKey = 'cyYcleGpmQdzdZhTt';
+    const serviceId = "service_681jsly";
+    const templateId = "template_74pfbsq";
+    const publicKey = "cyYcleGpmQdzdZhTt";
 
     // Create a new object that contains dynamic template params
     const templateParams = {
       from_name: name,
       from_email: email,
-      to_name: 'Web Wizard',
+      to_name: "Web Wizard",
       message: message,
     };
 
@@ -27,13 +27,13 @@ const EnquiryForm = () => {
     emailjs
       .send(serviceId, templateId, templateParams, publicKey)
       .then((response) => {
-        console.log('Email sent successfully!', response);
-        setName('');
-        setEmail('');
-        setMessage('');
+        console.log("Email sent successfully!", response);
+        setName("");
+        setEmail("");
+        setMessage("");
       })
       .catch((error) => {
-        console.error('Error sending email:', error);
+        console.error("Error sending email:", error);
       });
   };
 
@@ -44,6 +44,7 @@ const EnquiryForm = () => {
           <TextField
             label="Your Name"
             variant="outlined"
+            required
             fullWidth
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -65,7 +66,7 @@ const EnquiryForm = () => {
                 },
               },
               "& .MuiInputLabel-root": {
-                color: "white", 
+                color: "white",
               },
             }}
           />
@@ -75,6 +76,7 @@ const EnquiryForm = () => {
             label="Your Email"
             variant="outlined"
             type="email"
+            required
             fullWidth
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -92,11 +94,11 @@ const EnquiryForm = () => {
                   borderColor: "#007bff",
                 },
                 "& input": {
-                  color: "white", 
+                  color: "white",
                 },
               },
               "& .MuiInputLabel-root": {
-                color: "white", 
+                color: "white",
               },
             }}
           />
@@ -108,6 +110,7 @@ const EnquiryForm = () => {
             multiline
             rows={4}
             fullWidth
+            required
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             sx={{
@@ -124,7 +127,7 @@ const EnquiryForm = () => {
                   borderColor: "#007bff",
                 },
                 "& input": {
-                  color: "white", 
+                  color: "white",
                 },
                 "& textarea": {
                   color: "white",

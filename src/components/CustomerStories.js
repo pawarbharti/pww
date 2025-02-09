@@ -58,7 +58,12 @@ const CustomerStories = () => {
         minHeight: "100vh",
       }}
     >
-      <Typography variant="h4" align="center" gutterBottom sx={{mb: "1.35em"}}>
+      <Typography
+        variant="h4"
+        align="center"
+        gutterBottom
+        sx={{ mb: "1.35em" }}
+      >
         Customer Stories
       </Typography>
       <Grid container spacing={4} justifyContent="center">

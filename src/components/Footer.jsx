@@ -15,13 +15,7 @@ const Footer = () => {
       <Container>
         <Grid container spacing={4} justifyContent="center">
           {/* Column 1: Quick Links */}
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            md={3}
-      
-          >
+          <Grid item xs={12} sm={6} md={3}>
             <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
               Quick Links
             </Typography>
@@ -41,14 +35,6 @@ const Footer = () => {
             >
               Projects
             </Link>
-            {/* <Link
-              href="/gallery"
-              color="inherit"
-              underline="hover"
-              sx={{ display: "block", mb: 1 }}
-            >
-              Gallery
-            </Link> */}
             <Link
               href="/about"
               color="inherit"
@@ -65,15 +51,9 @@ const Footer = () => {
             >
               Contact
             </Link>
-           
           </Grid>
 
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            md={3}
-          >
+          <Grid item xs={12} sm={6} md={3}>
             <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
               Contact Us
             </Typography>
@@ -93,13 +73,7 @@ const Footer = () => {
           </Grid>
 
           {/* Column 3: Social Media */}
-          <Grid
-            item
-            xs={12}
-            md={3}
-            textAlign="center"
-       
-          >
+          <Grid item xs={12} md={3} textAlign="center">
             <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
               Follow Us
             </Typography>
@@ -110,7 +84,15 @@ const Footer = () => {
                 rel="noopener noreferrer"
               >
                 <IconButton
-                  sx={{ color: "white", "&:hover": { color: "#1877f2" , transform: "scale(1.3)", cursor: "pointer",  transition: "transform 0.2s ease", } }}
+                  sx={{
+                    color: "white",
+                    "&:hover": {
+                      color: "#1877f2",
+                      transform: "scale(1.3)",
+                      cursor: "pointer",
+                      transition: "transform 0.2s ease",
+                    },
+                  }}
                 >
                   <Facebook />
                 </IconButton>
@@ -121,7 +103,15 @@ const Footer = () => {
                 rel="noopener noreferrer"
               >
                 <IconButton
-                  sx={{ color: "white", "&:hover": { color: "#e1306c" , transform: "scale(1.3)", cursor: "pointer",  transition: "transform 0.2s ease", } }}
+                  sx={{
+                    color: "white",
+                    "&:hover": {
+                      color: "#e1306c",
+                      transform: "scale(1.3)",
+                      cursor: "pointer",
+                      transition: "transform 0.2s ease",
+                    },
+                  }}
                 >
                   <Instagram />
                 </IconButton>
@@ -132,7 +122,15 @@ const Footer = () => {
                 rel="noopener noreferrer"
               >
                 <IconButton
-                  sx={{ color: "white", "&:hover": { color: "#25d366" , transform: "scale(1.3)", cursor: "pointer",  transition: "transform 0.2s ease", } }}
+                  sx={{
+                    color: "white",
+                    "&:hover": {
+                      color: "#25d366",
+                      transform: "scale(1.3)",
+                      cursor: "pointer",
+                      transition: "transform 0.2s ease",
+                    },
+                  }}
                 >
                   <WhatsApp />
                 </IconButton>
@@ -143,7 +141,15 @@ const Footer = () => {
                 rel="noopener noreferrer"
               >
                 <IconButton
-                  sx={{ color: "white", "&:hover": { color: "#bb001b" , transform: "scale(1.3)", cursor: "pointer",  transition: "transform 0.2s ease", } }}
+                  sx={{
+                    color: "white",
+                    "&:hover": {
+                      color: "#bb001b",
+                      transform: "scale(1.3)",
+                      cursor: "pointer",
+                      transition: "transform 0.2s ease",
+                    },
+                  }}
                 >
                   <Mail />
                 </IconButton>

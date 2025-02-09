@@ -1,5 +1,12 @@
 import React from "react";
-import { Box, Container, Typography, Grid, Card, CardContent } from "@mui/material";
+import {
+  Box,
+  Container,
+  Typography,
+  Grid,
+  Card,
+  CardContent,
+} from "@mui/material";
 import { Fade } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
@@ -17,7 +24,14 @@ const features = [
 
 const EverythingYouNeed = () => {
   return (
-    <Box sx={{ backgroundColor: "#121212", color: "white", py: 6, textAlign: "center" }}>
+    <Box
+      sx={{
+        backgroundColor: "#121212",
+        color: "white",
+        py: 6,
+        textAlign: "center",
+      }}
+    >
       <Container>
         <Fade in={true} timeout={1000}>
           <Typography variant="h4" gutterBottom sx={{ fontWeight: "bold" }}>

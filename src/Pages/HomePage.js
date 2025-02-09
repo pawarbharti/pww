@@ -10,7 +10,7 @@ function HomePage() {
   return (
     <div>
       <DescriptionPage />
-      <Comparison/>
+      <Comparison />
       <Specifications />
       <WorkWithUs />
       <EverythingYouNeed />

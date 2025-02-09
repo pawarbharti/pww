@@ -1,44 +1,64 @@
 import React from "react";
-import { Box, Container, Grid, Typography, Card, CardMedia, CardContent, Fade } from "@mui/material";
+import {
+  Box,
+  Container,
+  Grid,
+  Typography,
+  Card,
+  CardMedia,
+  CardContent,
+  Fade,
+} from "@mui/material";
 
 const specifications = [
   {
     title: "Aluminium Doors",
-    description: "Aluminum doors are built to last, offering exceptional strength and resistance to impact.",
-    image: "images/Aluminum 3.jpg"
+    description:
+      "Aluminum doors are built to last, offering exceptional strength and resistance to impact.",
+    image: "images/Aluminum 3.jpg",
   },
   {
     title: "Aluminium Windows",
-    description: "With thermal breaks, aluminum windows can help reduce heat transfer, improving insulation.",
-    image: "images/aluminum 5.jpg"
+    description:
+      "With thermal breaks, aluminum windows can help reduce heat transfer, improving insulation.",
+    image: "images/aluminum 5.jpg",
   },
   {
     title: "uPVC Doors and Windows",
-    description: "uPVC doors offer excellent thermal insulation and reduce energy bills.",
-    image: "images/upvc 2.jpg"
+    description:
+      "uPVC doors offer excellent thermal insulation and reduce energy bills.",
+    image: "images/upvc 2.jpg",
   },
   {
     title: "Sliding Doors and Windows",
-    description: "Sliding doors open horizontally, making them ideal for areas with limited space.",
-    image: "images/upvc 1.png"
+    description:
+      "Sliding doors open horizontally, making them ideal for areas with limited space.",
+    image: "images/upvc 1.png",
   },
   {
     title: "Fix and Top Hung Windows",
-    description: "Fixed windows are designed to provide a clean look, ideal for enhancing contemporary home aesthetics.",
-    image: "images/fix.jpg" 
+    description:
+      "Fixed windows are designed to provide a clean look, ideal for enhancing contemporary home aesthetics.",
+    image: "images/fix.jpg",
   },
   {
     title: "Casement Windows",
-    description: "Casement windows are available with energy-efficient options, which help to reduce heat loss.",
-    image: "images/dounble hung.jpg" // 
-  }
+    description:
+      "Casement windows are available with energy-efficient options, which help to reduce heat loss.",
+    image: "images/dounble hung.jpg",
+  },
 ];
 
 const Specifications = () => {
   return (
     <Box sx={{ backgroundColor: "#121212", color: "white", py: 5 }}>
       <Container>
-        <Typography variant="h4" align="center" gutterBottom sx={{ fontWeight: "bold" , mb: "1.35em" }}>
+        <Typography
+          variant="h4"
+          align="center"
+          gutterBottom
+          sx={{ fontWeight: "bold", mb: "1.35em" }}
+        >
           Specifications
         </Typography>
         <Grid container spacing={3} justifyContent="center">
@@ -56,7 +76,12 @@ const Specifications = () => {
                     },
                   }}
                 >
-                  <CardMedia component="img" height="200" image={spec.image} alt={spec.title} />
+                  <CardMedia
+                    component="img"
+                    height="200"
+                    image={spec.image}
+                    alt={spec.title}
+                  />
                   <CardContent>
                     <Typography variant="h6" sx={{ fontWeight: "bold" }}>
                       {spec.title}

@@ -12,9 +12,9 @@ import {
   Tooltip,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import DownloadIcon from "@mui/icons-material/Download"; 
+import DownloadIcon from "@mui/icons-material/Download";
 import { Link } from "react-router-dom";
-import { saveAs } from "file-saver"; 
+import { saveAs } from "file-saver";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -39,16 +39,7 @@ const Navbar = () => {
   return (
     <>
       <AppBar position="static" sx={{ backgroundColor: "#121212" }}>
-        <Toolbar>
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            onClick={handleDrawerToggle}
-            sx={{ display: { xs: "block", sm: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
+        <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           <img
             src="/images/pinnacle window logo.jpg"
             alt="Logo"
@@ -78,21 +69,34 @@ const Navbar = () => {
             ))}
           </Box>
 
-          {/* Add the download icon with tooltip at the end */}
-          <Tooltip title="Download Catalogue">
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-end",
+            }}
+          >
+            {/* Add the download icon with tooltip at the end */}
+            <Tooltip title="Download Catalogue">
+              <IconButton color="inherit" onClick={handleDownload}>
+                <DownloadIcon />
+              </IconButton>
+            </Tooltip>
             <IconButton
+              edge="start"
               color="inherit"
-              onClick={handleDownload}
-              sx={{ ml: 2 }}
+              aria-label="menu"
+              onClick={handleDrawerToggle}
+              sx={{ display: { xs: "block", sm: "none" } }}
             >
-              <DownloadIcon />
+              <MenuIcon />
             </IconButton>
-          </Tooltip>
+          </Box>
         </Toolbar>
       </AppBar>
 
       <Drawer
-        anchor="left"
+        anchor="right"
         open={mobileOpen}
         onClose={handleDrawerToggle}
         sx={{

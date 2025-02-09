@@ -96,7 +96,6 @@ const Projects = () => {
         minHeight: "100vh",
       }}
     >
-    
       <Typography variant="h5" align="center" gutterBottom>
         Featured Projects
       </Typography>
@@ -119,7 +118,10 @@ const Projects = () => {
                 <Typography variant="h6" gutterBottom>
                   {project.title}
                 </Typography>
-                <Typography variant="body2">{project.description.split(0, 20)}</Typography>
+                <Typography variant="body2">{`${project.description.slice(
+                  0,
+                  110
+                )}...`}</Typography>
               </CardContent>
             </Card>
           </Grid>

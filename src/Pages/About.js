@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Container, Grid, Typography, CardMedia } from "@mui/material";
 import FAQ from "../components/FrequentlyAskedQuestions";
-import Clients from "../components/Clients";
 
 const About = () => {
   return (
@@ -21,7 +20,7 @@ const About = () => {
             <Typography
               variant="body1"
               paragraph
-              sx={{ color: "white", fontSize: "1.1rem" }}
+              sx={{ color: "white", fontSize: { xs: "1rem", sm: "1.1rem" } }}
             >
               Pinnacle Window is a leading provider of premium uPVC and aluminum
               doors and windows, offering the perfect blend of style,
@@ -33,7 +32,7 @@ const About = () => {
             <Typography
               variant="body1"
               paragraph
-              sx={{ color: "white", fontSize: "1.1rem" }}
+              sx={{ color: "white", fontSize: { xs: "1rem", sm: "1.1rem" } }}
             >
               Our range of windows and doors are designed to not only enhance
               the aesthetic appeal of your space but also provide superior
@@ -44,7 +43,7 @@ const About = () => {
             <Typography
               variant="body1"
               paragraph
-              sx={{ color: "white", fontSize: "1.1rem" }}
+              sx={{ color: "white", fontSize: { xs: "1rem", sm: "1.1rem" } }}
             >
               At Pinnacle Window, we are committed to delivering exceptional
               customer service, ensuring that every project is handled with
@@ -57,7 +56,6 @@ const About = () => {
           {/* Right side: Images with gap between them */}
           <Grid item xs={12} sm={6}>
             <Grid container spacing={2}>
-              {" "}
               {/* Added a Grid container for spacing between images */}
               <Grid item xs={12}>
                 <CardMedia
@@ -71,7 +69,6 @@ const About = () => {
                     width: "100%",
                     objectFit: "cover",
                     transition: "transform 0.3s ease-in-out",
-                    ml: "80px",
                     "&:hover": {
                       transform: "scale(1.05)",
                       boxShadow: "0 4px 20px rgba(255, 255, 255, 0.2)",
@@ -102,7 +99,7 @@ const About = () => {
             </Grid>
           </Grid>
         </Grid>
-        <FAQ/>
+        <FAQ />
       </Container>
     </Box>
   );

@@ -55,8 +55,8 @@ const WhyChooseUs = () => {
                 value for your investment.
               </Typography>
               <Button
-                component={Link} 
-                to="/contact" 
+                component={Link}
+                to="/contact"
                 variant="contained"
                 sx={{
                   backgroundColor: "#ff6f61",

@@ -1,12 +1,19 @@
 import React from "react";
-import { Box, Typography, Grid, Card, CardMedia, CardContent } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Grid,
+  Card,
+  CardMedia,
+  CardContent,
+} from "@mui/material";
 
 const StylesAndColors = () => {
   return (
     <Box
       sx={{
-        backgroundColor: "#121212", // Dark theme background
-        color: "#e0e0e0", // Light text color
+        backgroundColor: "#121212",
+        color: "#e0e0e0",
         padding: 3,
       }}
     >
@@ -28,15 +35,17 @@ const StylesAndColors = () => {
             <CardMedia
               component="img"
               height="250"
-              image="https://via.placeholder.com/400x250.png?text=uPVC+Door"
+              image="images/stylecolor2.jpg"
               alt="uPVC Door"
             />
             <CardContent>
               <Typography variant="h6" color="white">
                 uPVC Doors and Windows
               </Typography>
-              <Typography variant="body2" color="text.secondary">
-                uPVC doors and windows come in a variety of colors such as white, cream, and even wood effect finishes. They are low maintenance and energy-efficient.
+              <Typography variant="body2" color="white">
+                uPVC doors and windows come in a variety of colors such as
+                white, cream, and even wood effect finishes. They are low
+                maintenance and energy-efficient.
               </Typography>
             </CardContent>
           </Card>
@@ -48,15 +57,17 @@ const StylesAndColors = () => {
             <CardMedia
               component="img"
               height="250"
-              image= "images/stylecolor.jpg"
+              image="images/stylecolor.jpg"
               alt="Aluminium Window"
             />
             <CardContent>
               <Typography variant="h6" color="white">
                 Aluminium Doors and Windows
               </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Aluminium windows and doors are available in a wide range of RAL colors. They are durable, modern, and can accommodate large glass panes for sleek designs.
+              <Typography variant="body2" color="white">
+                Aluminium windows and doors are available in a wide range of RAL
+                colors. They are durable, modern, and can accommodate large
+                glass panes for sleek designs.
               </Typography>
             </CardContent>
           </Card>
@@ -83,15 +94,16 @@ const StylesAndColors = () => {
               <CardMedia
                 component="img"
                 height="250"
-                image="https://via.placeholder.com/400x250.png?text=uPVC+Colors"
+                image="images/stylecolor3.jpg"
                 alt="uPVC Color Options"
               />
               <CardContent>
                 <Typography variant="h6" color="white">
                   uPVC Color Options
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  uPVC doors and windows are primarily available in white, beige, and grey, with a variety of wood grain finishes.
+                <Typography variant="body2" color="white">
+                  uPVC doors and windows are primarily available in white,
+                  beige, and grey, with a variety of wood grain finishes.
                 </Typography>
               </CardContent>
             </Card>
@@ -103,15 +115,17 @@ const StylesAndColors = () => {
               <CardMedia
                 component="img"
                 height="250"
-                image="https://via.placeholder.com/400x250.png?text=Aluminium+Colors"
+                image="images/stylecolor4.jpg"
                 alt="Aluminium Color Options"
               />
               <CardContent>
                 <Typography variant="h6" color="white">
                   Aluminium Color Options
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Aluminium frames come in a variety of colors from metallic finishes to bold, custom RAL colors, offering a modern and sleek aesthetic.
+                <Typography variant="body2" color="white">
+                  Aluminium frames come in a variety of colors from metallic
+                  finishes to bold, custom RAL colors, offering a modern and
+                  sleek aesthetic.
                 </Typography>
               </CardContent>
             </Card>
