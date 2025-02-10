@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import Footer  from "./components/Footer"
+import Footer from "./components/Footer";
 
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
@@ -9,6 +9,7 @@ import Projects from "./Pages/Projects";
 import Gallery from "./Pages/Gallery";
 import Contact from "./Pages/Contact";
 import About from "./Pages/About";
+import NotFoundPage from "./Pages/NotFound";
 
 function App() {
   return (
@@ -21,8 +22,9 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
+          <Route path="*" element={<NotFoundPage/>} />
         </Routes>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </>
   );

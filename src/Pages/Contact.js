@@ -94,8 +94,6 @@ const Contact = () => {
             >
               Send us a Message
             </Typography>
-
-            {/* Use the EnquiryForm component here */}
             <EnquiryForm />
           </Grid>
         </Grid>

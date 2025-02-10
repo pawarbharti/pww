@@ -57,15 +57,22 @@ const Footer = () => {
             <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
               Contact Us
             </Typography>
+            <Box sx={{display: "flex"}}>
+            <Box sx={{width: "21px"}}>📍</Box>
             <Typography variant="body2" sx={{ mb: 1 }}>
-              📍 203, 2nd floor DDA tower, Plot No. 2, Sec-5, Rohini,
+              203, 2nd floor DDA tower, Plot No. 2, Sec-5, Rohini,
               Delhi-110085
             </Typography>
+            </Box>
+
+            <Box sx={{display:"flex"}}>
+            <Box sx={{width: "21px"}}>📞</Box>
             <Typography variant="body2" sx={{ mb: 1 }}>
-              📞 +91-9910553531, +91-8130760799
+               +91-9910553531, +91-8130760799
             </Typography>
+            </Box>
             <Box sx={{ display: "flex", alignItems: "center" }}>
-              <Mail sx={{ mr: 1 }} />
+              <Mail sx={{ width:"21px" , mr:1}} />
               <Typography variant="body2">
                 pinnaclehomesolutions24@gmail.com
               </Typography>

@@ -124,8 +124,7 @@ const StylesAndColors = () => {
                 </Typography>
                 <Typography variant="body2" color="white">
                   Aluminium frames come in a variety of colors from metallic
-                  finishes to bold, custom RAL colors, offering a modern and
-                  sleek aesthetic.
+                  finishes to bold, custom RAL colors.
                 </Typography>
               </CardContent>
             </Card>
