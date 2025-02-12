@@ -61,6 +61,7 @@ const Gallery = () => {
                 height="200"
                 image={image}
                 alt={`Gallery image ${index + 1}`}
+                loading="lazy"
                 sx={{
                   objectFit: "cover",
                   borderRadius: "8px 8px 0 0",

@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Container, Grid, Typography, CardMedia } from "@mui/material";
 import FAQ from "../components/FrequentlyAskedQuestions";
+import Experience from "../components/Experience";
 
 const About = () => {
   return (
@@ -83,6 +84,7 @@ const About = () => {
                   height="270"
                   image="images/gallery 12.png"
                   alt="Pinnacle Window Products"
+                  loading="lazy"
                   sx={{
                     borderRadius: "8px",
                     boxShadow: "0 4px 15px rgba(255, 255, 255, 0.3)",
@@ -99,6 +101,7 @@ const About = () => {
             </Grid>
           </Grid>
         </Grid>
+        <Experience/>
         <FAQ />
       </Container>
     </Box>

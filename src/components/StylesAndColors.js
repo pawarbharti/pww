@@ -117,6 +117,7 @@ const StylesAndColors = () => {
                 height="250"
                 image="images/stylecolor4.jpg"
                 alt="Aluminium Color Options"
+                loading="lazy"
               />
               <CardContent>
                 <Typography variant="h6" color="white">

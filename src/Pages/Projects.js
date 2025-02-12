@@ -37,7 +37,7 @@ const projects = [
   {
     title: "Modern Living with UPVC Sliding Doors",
     description:
-      "uPVC sliding doors are a popular choice for modern homes and commercial spaces due to their durability, low maintenance, and energy efficiency. uPVC stands for unplasticized polyvinyl chloride, a material known for its strength and weather resistance, making it an ideal option for exterior doors. These doors feature one or more panels that glide smoothly along a track, withone fixed and one or more movable panels. The sliding mechanism allows for easy access to outdoor spaces without taking up additional room for door swing.",
+      "uPVC sliding doors are a popular choice for modern homes and commercial spaces due to their durability, low maintenance, and energy efficiency. uPVC stands for unplasticized polyvinyl chloride, a material known for its strength and weather resistance, making it an ideal option for exterior doors. These doors feature one or more panels that glide smoothly along a track, with one fixed and one or more movable panels. The sliding mechanism allows for easy access to outdoor spaces without taking up additional room for door swing.",
     image: "images/projects 1.png",
   },
   {
@@ -61,7 +61,7 @@ const projects = [
   {
     title: "Aluminium Doors",
     description:
-      "Aluminum doors combine modern design with exceptional durability, offering a sleek, stylish solution for both residential and commercial spaces. Made from high-quality, corrosion-resistant aluminum, these doors are built to withstand harsh weather conditions while maintaining their appearance over time. Their energy-efficient properties, enhanced with double or triple glazing options, help maintain optimal temperature control inside your space.With reinforced frames, aluminum doors also provide enhanced security.",
+      "Aluminum doors combine modern design with exceptional durability, offering a sleek, stylish solution for both residential and commercial spaces. Made from high-quality, corrosion-resistant aluminum, these doors are built to withstand harsh weather conditions while maintaining their appearance over time. Their energy-efficient properties, enhanced with double or triple glazing options, help maintain optimal temperature control inside your space. With reinforced frames, aluminum doors also provide enhanced security.",
     image: "images/projects 5.jpg",
   },
   {
@@ -113,6 +113,7 @@ const Projects = () => {
                 height="200"
                 image={project.image}
                 alt={project.title}
+                loading="lazy" 
               />
               <CardContent sx={{ color: "white" }}>
                 <Typography variant="h6" gutterBottom>
@@ -185,6 +186,7 @@ const Projects = () => {
                     objectFit: "cover",
                     borderRadius: "8px 8px 0 0",
                   }}
+                  loading="lazy"
                 />
               </Card>
             </Grid>
@@ -225,6 +227,7 @@ const Projects = () => {
                 image={selectedProject.image}
                 alt={selectedProject.title}
                 sx={{ borderRadius: "10px", marginBottom: "20px" }}
+                loading="lazy"
               />
               <Typography variant="body1">
                 {selectedProject.description}

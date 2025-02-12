@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 import {
   Box,
   Typography,
@@ -88,6 +88,7 @@ const CustomerStories = () => {
                 height="200"
                 image={story.image}
                 alt={story.name}
+                loading="lazy"
                 sx={{
                   objectFit: "cover",
                   borderRadius: "8px 8px 0 0",

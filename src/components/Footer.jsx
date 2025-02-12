@@ -7,7 +7,7 @@ import {
   Link,
   IconButton,
 } from "@mui/material";
-import { Facebook, Instagram, WhatsApp, Mail } from "@mui/icons-material";
+import { Instagram, WhatsApp, Mail } from "@mui/icons-material";
 
 const Footer = () => {
   return (
@@ -53,26 +53,27 @@ const Footer = () => {
             </Link>
           </Grid>
 
+          {/* Column 2: Contact Us */}
           <Grid item xs={12} sm={6} md={3}>
             <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
               Contact Us
             </Typography>
-            <Box sx={{display: "flex"}}>
-            <Box sx={{width: "21px"}}>📍</Box>
-            <Typography variant="body2" sx={{ mb: 1 }}>
-              203, 2nd floor DDA tower, Plot No. 2, Sec-5, Rohini,
-              Delhi-110085
-            </Typography>
+            <Box sx={{ display: "flex" }}>
+              <Box sx={{ width: "21px" }}>📍</Box>
+              <Typography variant="body2" sx={{ mb: 1 }}>
+                203, 2nd floor DDA tower, Plot No. 2, Sec-5, Rohini,
+                Delhi-110085
+              </Typography>
             </Box>
 
-            <Box sx={{display:"flex"}}>
-            <Box sx={{width: "21px"}}>📞</Box>
-            <Typography variant="body2" sx={{ mb: 1 }}>
-               +91-9910553531, +91-8130760799
-            </Typography>
+            <Box sx={{ display: "flex" }}>
+              <Box sx={{ width: "21px" }}>📞</Box>
+              <Typography variant="body2" sx={{ mb: 1 }}>
+                +91-9910553531, +91-8130760799
+              </Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center" }}>
-              <Mail sx={{ width:"21px" , mr:1}} />
+              <Mail sx={{ width: "21px", mr: 1 }} />
               <Typography variant="body2">
                 pinnaclehomesolutions24@gmail.com
               </Typography>
@@ -85,25 +86,6 @@ const Footer = () => {
               Follow Us
             </Typography>
             <Box>
-              <Link
-                href="https://www.facebook.com/yourpage"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <IconButton
-                  sx={{
-                    color: "white",
-                    "&:hover": {
-                      color: "#1877f2",
-                      transform: "scale(1.3)",
-                      cursor: "pointer",
-                      transition: "transform 0.2s ease",
-                    },
-                  }}
-                >
-                  <Facebook />
-                </IconButton>
-              </Link>
               <Link
                 href="https://www.instagram.com/pinnaclehomesolutions_203"
                 target="_blank"
@@ -124,7 +106,7 @@ const Footer = () => {
                 </IconButton>
               </Link>
               <Link
-                href="https://wa.me/+91-9910553531"
+                href="https://wa.me/919910553531"
                 target="_blank"
                 rel="noopener noreferrer"
               >

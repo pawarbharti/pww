@@ -51,6 +51,7 @@ const DescriptionPage = () => {
               height="auto"
               image="images/sliding1.png"
               alt="Aluminum Doors"
+              loading="lazy"
               sx={{
                 borderRadius: "8px",
                 boxShadow: "0 4px 15px rgba(255, 255, 255, 0.3)",

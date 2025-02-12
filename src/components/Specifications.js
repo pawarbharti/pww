@@ -81,6 +81,7 @@ const Specifications = () => {
                     height="200"
                     image={spec.image}
                     alt={spec.title}
+                    loading="lazy"
                   />
                   <CardContent>
                     <Typography variant="h6" sx={{ fontWeight: "bold" }}>

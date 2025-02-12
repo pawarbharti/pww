@@ -42,8 +42,9 @@ const Navbar = () => {
           <img
             src="/images/pinnacle window logo.jpg"
             alt="Logo"
-            style={{ height: 60, marginRight: 16, marginTop: 5 }}
+            style={{ height: 50, marginRight: 12, marginTop: 4 }}
           />
+
           <Box sx={{ ml: "auto", display: { xs: "none", sm: "flex" } }}>
             {navItems.map((item) => (
               <Link
@@ -75,7 +76,6 @@ const Navbar = () => {
               justifyContent: "flex-end",
             }}
           >
-            {/* Add the download icon with tooltip at the end */}
             <Tooltip title="Download Catalogue">
               <IconButton color="inherit" onClick={handleDownload}>
                 <DownloadIcon />

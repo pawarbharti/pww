@@ -10,20 +10,17 @@ const EnquiryForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Your EmailJS service ID, template ID, and Public Key
-    const serviceId = "service_681jsly";
-    const templateId = "template_74pfbsq";
-    const publicKey = "cyYcleGpmQdzdZhTt";
+    const serviceId = "service_n8ak95o";
+    const templateId = "template_f5bnfrp";
+    const publicKey = "QTFflwixvQgkxxBRh";
 
-    // Create a new object that contains dynamic template params
     const templateParams = {
       from_name: name,
       from_email: email,
-      to_name: "Web Wizard",
+      to_name: "Pinnacle Window",
       message: message,
     };
 
-    // Send the email using EmailJS
     emailjs
       .send(serviceId, templateId, templateParams, publicKey)
       .then((response) => {

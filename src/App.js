@@ -1,10 +1,9 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
-
+import FloatingActionButton from "./components/FloatingActionButton";
 import Projects from "./Pages/Projects";
 import Gallery from "./Pages/Gallery";
 import Contact from "./Pages/Contact";
@@ -22,9 +21,10 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
-          <Route path="*" element={<NotFoundPage/>} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />
+        <FloatingActionButton />
       </BrowserRouter>
     </>
   );
