@@ -2,17 +2,16 @@ import React, { useState } from "react";
 import {
   AppBar,
   Toolbar,
-  IconButton,
   Typography,
   Drawer,
   List,
   ListItem,
   ListItemText,
   Box,
+  IconButton,
   Tooltip,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import DownloadIcon from "@mui/icons-material/Download";
 import { Link } from "react-router-dom";
 import { saveAs } from "file-saver";
 
@@ -67,6 +66,24 @@ const Navbar = () => {
                 </Typography>
               </Link>
             ))}
+
+            {/* Tooltip with Download text */}
+            <Tooltip title="Download Catalogue">
+              <Typography
+                sx={{
+                  color: "white",
+                  mx: 2,
+                  cursor: "pointer",
+                  transition: "transform 0.2s ease",
+                  "&:hover": {
+                    transform: "scale(1.2)",
+                  },
+                }}
+                onClick={handleDownload}
+              >
+                Download
+              </Typography>
+            </Tooltip>
           </Box>
 
           <Box
@@ -76,11 +93,6 @@ const Navbar = () => {
               justifyContent: "flex-end",
             }}
           >
-            <Tooltip title="Download Catalogue">
-              <IconButton color="inherit" onClick={handleDownload}>
-                <DownloadIcon />
-              </IconButton>
-            </Tooltip>
             <IconButton
               edge="start"
               color="inherit"
@@ -121,6 +133,21 @@ const Navbar = () => {
               </Link>
             </ListItem>
           ))}
+
+          {/* Add Tooltip with Download text in the Drawer */}
+          <ListItem button onClick={handleDownload}>
+            <Tooltip title="Download Catalogue">
+              <ListItemText
+                primary="Download"
+                sx={{
+                  transition: "transform 0.2s ease",
+                  "&:hover": {
+                    transform: "scale(1.1)",
+                  },
+                }}
+              />
+            </Tooltip>
+          </ListItem>
         </List>
       </Drawer>
     </>
