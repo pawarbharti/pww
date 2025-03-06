@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Box,
   Container,
   Grid,
   Typography,
@@ -12,54 +11,61 @@ import {
 
 const specifications = [
   {
-    title: "Aluminium Doors",
+    title: "Modern Aluminium Doors",
     description:
-      "Aluminum doors are built to last, offering exceptional strength and resistance to impact.",
+      "Enhance your home with durable and stylish aluminum doors. These doors offer excellent impact resistance, energy efficiency, and a sleek modern design.",
     image: "images/Aluminum 3.jpg",
+    alt: "Modern Aluminium Doors with Strong Impact Resistance",
   },
   {
-    title: "Aluminium Windows",
+    title: "Energy-Efficient Aluminium Windows",
     description:
-      "With thermal breaks, aluminum windows can help reduce heat transfer, improving insulation.",
+      "Aluminum windows with thermal breaks help reduce heat transfer, improving insulation and cutting down on energy bills.",
     image: "images/aluminum 5.jpg",
+    alt: "Energy-Efficient Aluminium Windows with Thermal Break Technology",
   },
   {
-    title: "uPVC Doors and Windows",
+    title: "uPVC Doors & Windows for Better Insulation",
     description:
-      "uPVC doors offer excellent thermal insulation and reduce energy bills.",
+      "Designed for high thermal efficiency, uPVC doors and windows help maintain indoor temperature, reducing heating and cooling costs.",
     image: "images/upvc 2.jpg",
+    alt: "White uPVC Doors and Windows Offering High Insulation",
   },
   {
-    title: "Sliding Doors and Windows",
+    title: "Space-Saving Sliding Doors & Windows",
     description:
-      "Sliding doors open horizontally, making them ideal for areas with limited space.",
+      "Sliding doors provide a modern touch with effortless operation. Ideal for compact spaces, they maximize natural light and ventilation.",
     image: "images/upvc 1.png",
+    alt: "Modern Sliding Doors and Windows with Space-Saving Design",
   },
   {
-    title: "Fix and Top Hung Windows",
+    title: "Fixed & Top Hung Windows for Modern Homes",
     description:
-      "Fixed windows are designed to provide a clean look, ideal for enhancing contemporary home aesthetics.",
+      "Fixed windows offer uninterrupted views, while top-hung windows provide controlled ventilation—both ideal for contemporary home designs.",
     image: "images/fix.jpg",
+    alt: "Fixed and Top Hung Windows with Modern Aesthetic",
   },
   {
-    title: "Casement Windows",
+    title: "Energy-Saving Casement Windows",
     description:
-      "Casement windows are available with energy-efficient options, which help to reduce heat loss.",
+      "Casement windows provide superior airflow and energy efficiency, making them an ideal choice for sustainable homes.",
     image: "images/dounble hung.jpg",
+    alt: "Casement Windows with Enhanced Energy Efficiency",
   },
 ];
 
 const Specifications = () => {
   return (
-    <Box sx={{ backgroundColor: "#121212", color: "white", py: 5 }}>
+    <section style={{ backgroundColor: "#121212", color: "white", padding: "40px 0" }}>
       <Container>
         <Typography
           variant="h4"
+          component="h2"
           align="center"
           gutterBottom
           sx={{ fontWeight: "bold", mb: "1.35em" }}
         >
-          Specifications
+          Product Specifications & Benefits
         </Typography>
         <Grid container spacing={3} justifyContent="center">
           {specifications.map((spec, index) => (
@@ -80,11 +86,11 @@ const Specifications = () => {
                     component="img"
                     height="200"
                     image={spec.image}
-                    alt={spec.title}
+                    alt={spec.alt}
                     loading="lazy"
                   />
                   <CardContent>
-                    <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+                    <Typography variant="h6" component="h3" sx={{ fontWeight: "bold" }}>
                       {spec.title}
                     </Typography>
                     <Typography variant="body2">{spec.description}</Typography>
@@ -95,7 +101,7 @@ const Specifications = () => {
           ))}
         </Grid>
       </Container>
-    </Box>
+    </section>
   );
 };
 

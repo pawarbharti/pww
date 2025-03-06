@@ -3,54 +3,55 @@ import { Box, Container, Grid, Typography, CardMedia } from "@mui/material";
 
 const DescriptionPage = () => {
   return (
-    <Box sx={{ backgroundColor: "#121212", color: "white", py: 5 }}>
+    <Box
+      component="section"
+      sx={{ backgroundColor: "#121212", color: "white", py: 5 }}
+    >
       <Container>
         <Typography
-          variant="h4"
+          variant="h1"
           align="left"
           gutterBottom
-          sx={{ fontWeight: "bold" }}
+          sx={{ fontWeight: "bold", fontSize: { xs: "2rem", sm: "2.5rem" } }}
         >
           Pinnacle Window
         </Typography>
+
         <Grid container spacing={3} justifyContent="center" alignItems="center">
-          {/* Left side: Paragraph */}
+          {/* Left side: SEO-optimized content */}
           <Grid item xs={12} sm={6}>
             <Typography
-              variant="body1"
-              paragraph
-              sx={{ color: "white", fontSize: "1.1rem" }}
+              variant="h2"
+              sx={{ fontSize: "1.5rem", fontWeight: "bold", mb: 2 }}
             >
-              Aluminum and uPVC doors and windows are the perfect combination of
-              style and durability for modern homes. They offer excellent
-              thermal insulation, providing energy-efficient solutions while
-              enhancing the aesthetic of any living space. Whether you're
-              looking for sleek aluminum frames or the high energy efficiency of
-              uPVC, our selection ensures longevity and superior performance.
-              Sliding doors and fixed windows are also a fantastic option for
-              enhancing contemporary home designs.
+              Elevate Your Space with Modern, Durable Windows & Doors
             </Typography>
-            <Typography
-              variant="body1"
-              paragraph
-              sx={{ color: "white", fontSize: "1.1rem" }}
-            >
-              Choose from our wide variety of designs such as double-hung
-              windows that allow for easy cleaning and airflow, or top-hung
-              windows for a unique, stylish touch. No matter what you're looking
-              for, our products deliver premium quality and exceptional
-              performance, meeting the highest standards for both residential
-              and commercial applications.
+            <Typography variant="body1" paragraph sx={{ fontSize: "1.1rem" }}>
+              Discover the perfect blend of{" "}
+              <strong>style, energy efficiency, and durability</strong> with our
+              premium <strong>aluminum and uPVC doors and windows</strong>.
+              Designed for modern homes and commercial spaces, our selection
+              offers exceptional <strong>thermal insulation</strong> and
+              contemporary aesthetics.
+            </Typography>
+            <Typography variant="body1" paragraph sx={{ fontSize: "1.1rem" }}>
+              Choose from a variety of styles, including{" "}
+              <strong>double-hung windows</strong> for easy cleaning and
+              ventilation, <strong>top-hung windows</strong> for a stylish
+              touch, or sleek <strong>sliding doors</strong> for seamless
+              indoor-outdoor living. Our high-quality materials ensure{" "}
+              <strong>long-lasting performance</strong> in all weather
+              conditions.
             </Typography>
           </Grid>
 
-          {/* Right side: GIF */}
+          {/* Right side: Optimized Image */}
           <Grid item xs={12} sm={6}>
             <CardMedia
               component="img"
               height="auto"
               image="images/sliding1.png"
-              alt="Aluminum Doors"
+              alt="Stylish Aluminium & uPVC Sliding Doors - Energy Efficient & Durable"
               loading="lazy"
               sx={{
                 borderRadius: "8px",
