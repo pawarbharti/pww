@@ -81,7 +81,7 @@ const Navbar = () => {
                 }}
                 onClick={handleDownload}
               >
-                Download
+                Catalogue
               </Typography>
             </Tooltip>
           </Box>

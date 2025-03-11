@@ -94,7 +94,7 @@ const StylesAndColors = () => {
               <CardMedia
                 component="img"
                 height="250"
-                image="images/stylecolor3.jpg"
+                image="images/clr.jpg"
                 alt="uPVC Color Options"
               />
               <CardContent>
@@ -115,7 +115,7 @@ const StylesAndColors = () => {
               <CardMedia
                 component="img"
                 height="250"
-                image="images/stylecolor4.jpg"
+                image="images/colors.jpg"
                 alt="Aluminium Color Options"
                 loading="lazy"
               />
